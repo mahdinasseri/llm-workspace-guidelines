@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title | default: "" }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/rtl-page.css' | relative_url }}">
-</head>
-<body>
-  <main class="rtl-page">
-    {{ content }}
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/rtl-page.css' | relative_url }}">
+    <style>
+      /* کمی استایل مشابه minima */
+      body {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        background-color: #fff;
+        color: #222;
+        line-height: 1.8;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      code {
+        background-color: #f6f8fa;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+
+      pre {
+        background-color: #f6f8fa;
+        padding: 1rem;
+        overflow-x: auto;
+        border-radius: 5px;
+      }
+
+      ul, ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e1e4e8;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body dir="rtl">
+    <header>
+      <h1>{{ page.title | default: site.title }}</h1>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer style="margin-top: 4rem; font-size: 0.9rem; text-align: center; color: #666;">
+      © {{ site.time | date: "%Y" }} {{ site.title | default: "شیوه‌نامه استفاده از هوش مصنوعی در فعالیت‌های تحلیل داده" }}
+    </footer>
+  </body>
 </html>
