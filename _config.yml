@@ -1,1 +1,7 @@
+title: "Marketing Team Guidelines"
+description: "Guideline for using GenAI in data analysis"
+theme: minima
+
+baseurl: "" 
+url: "https://mahdinasseri.github.io/llm-workspace-guidelines"
 css: /assets/css/style.css
